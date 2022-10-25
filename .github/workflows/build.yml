@@ -12,7 +12,6 @@ jobs:
         with:
           node-version: 16
       - name: npm install
-      - run: npm ci
+        run: npm ci
       - name: Compile wow.export win-x64
-      - run: mkdir bin\win-x64
-      - run: node build.js win-x64
+        run: mkdir bin\win-x64 && node build.js win-x64
