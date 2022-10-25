@@ -1,6 +1,9 @@
 name: Deploy wow.export
 
-on: workflow_dispatch
+on:  
+  push:
+    tags:
+      - '*'
 jobs: 
   build:
     name: Build and publish
