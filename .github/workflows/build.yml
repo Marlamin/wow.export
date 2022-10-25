@@ -12,6 +12,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
+          cache: npm
       - name: npm install
         run: npm ci
       - name: Compile wow.export win-x64
