@@ -3,7 +3,7 @@ name: Compile wow.export
 on: workflow_dispatch
 jobs: 
   build:
-    name: Build
+    name: Build and publish
     runs-on: windows-latest
     steps:
       - name: Checkout
