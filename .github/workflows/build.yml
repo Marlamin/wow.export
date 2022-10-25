@@ -6,9 +6,13 @@ jobs:
     name: Build
     runs-on: windows-latest
     steps:
+      - name: Set up
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+      - name: npm install
       - run: npm ci
+      - name: Compile wow.export win-x64
+      - run: mkdir bin\win-x64
       - run: node build.js win-x64
