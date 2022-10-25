@@ -29,3 +29,7 @@ jobs:
           SFTP_REMOTE_UPDATE_DIR: ${{ secrets.SFTP_REMOTE_UPDATE_DIR }}
           SFTP_REMOTE_PACKAGE_DIR: ${{ secrets.SFTP_REMOTE_UPDATE_DIR }}
         run: node publish.js win-x64
+      - name: Upload release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: bin\packages\wow.export-*.zip
