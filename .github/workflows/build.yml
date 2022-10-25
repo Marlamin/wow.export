@@ -1,4 +1,4 @@
-name: Compile wow.export
+name: Deploy wow.export
 
 on: workflow_dispatch
 jobs: 
